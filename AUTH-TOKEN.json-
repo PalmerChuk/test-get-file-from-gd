@@ -1,0 +1,7 @@
+{
+    "access_token" : "ya29.a0...",
+    "refresh_token": "1//0cr......ug",
+    "scope"        : "https://www.googleapis.com/auth/drive",
+    "token_type"   : "Bearer",
+    "expiry_date"  : 1582135995492
+}
