@@ -4,7 +4,8 @@
   "description": "Download google drive",
   "main": "app.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha test",
+    "run": "node app3.js"
   },
   "keywords": [
     "gd",
@@ -12,7 +13,7 @@
     "drive"
   ],
   "engines": {
-    "node": ">=12"
+    "node": ">=8"
   },
   "author": "chuk",
   "license": "ISC",

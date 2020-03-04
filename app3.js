@@ -360,20 +360,21 @@ async function driveDown(drive,list,options) {
 return Promise.resolve()
 	.then(async () => {
 	
-	let credentials;
+		let credentials;
 	
-	try {
-	    credentials = fs.readFileSync(CREDENTIALS_PATH,'utf8');     // Load client secrets from a local file.
-	} catch(err) {
-	    if (/not.*found|no.*such/i.test(err)) {
-		console.log(`Sorry! I guess you forgot: 
-		you must first download credentials from "https://console.developers.google.com/apis/credentials"
-		then - save it as file "${CREDENTIALS_PATH}"
-		`);
-		return Promise.reject('Credentials not found');
-	    }
-	    throw err;
-	}
+		try {
+	    	credentials = fs.readFileSync(CREDENTIALS_PATH,'utf8');     // Load client secrets from a local file.
+		} catch(err) {
+			if (/not.*found|no.*such/i.test(err)) {
+				console.log(`Sorry! I guess you forgot: 
+					you must first download credentials from "https://console.developers.google.com/apis/credentials"
+					then - save it as file "${CREDENTIALS_PATH}"
+				`);
+				return Promise.reject('Credentials not found');
+
+			}
+	    	throw err;
+		}
         
         credentials = JSON.parse(credentials);                          // Authorize a client with credentials, then call the Google Drive API.
         const auth  = await authorize(credentials);
